@@ -1,0 +1,32 @@
+#candidate-photo {
+    width: 100%;
+    display: block;
+    margin: 10px auto !important
+}
+
+#candidate-questions {
+    margin-bottom: 30px;
+}
+
+#candidate-view.visible {
+    min-height: 400px;
+}
+
+#candidate-seperator {
+    text-align: center;
+    border-top: 1px dashed black;
+    padding-top: 10px;
+}
+
+.question {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.answer {
+    padding-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
