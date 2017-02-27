@@ -15,7 +15,6 @@ Promise.all([loadCandidateData("data.json")]).then(function(result) {
     candidateData = result[0];
     initializeLayout(defaultMessage);
     loadQuestions();
-    loadCandidates();
     if (selected) {
         loadCandidate(selected);
     }
@@ -24,7 +23,8 @@ Promise.all([loadCandidateData("data.json")]).then(function(result) {
 
 jQuery(document).ready(function() {
     jQuery('.candidatelink').click(function() {
-        loadCandidate(this.text);
+        var currentPage = document.location.toString().split('?')[0];
+        document.location = currentPage + "?name=" + this.text;
         return false;
     });
 });
