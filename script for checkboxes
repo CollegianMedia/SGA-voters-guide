@@ -1,0 +1,136 @@
+<script>
+    jQuery("input[name='Student Body President and Vice President']").change(function() {
+        if (this.checked) {
+            jQuery(".candidate-list-president-vice-president").removeClass("hidden");
+        } else {
+            jQuery(".candidate-list-president-vice-president").addClass("hidden");
+        }
+    });
+    jQuery("input[name='Student Senate']").change(function() {
+        if (this.checked) {
+            if (jQuery("input[name='Student Senate']").prop("indeterminate")) {
+                // do nothing
+            } else {
+                jQuery("input[name='College of Agriculture']").prop("checked",true);
+                jQuery("input[name='College of Architecture, Planning and Design']").prop("checked",true);
+                jQuery("input[name='College of Arts & Sciences']").prop("checked",true);
+                jQuery("input[name='College of Business Administration']").prop("checked",true);
+                jQuery("input[name='College of Education']").prop("checked",true);
+                jQuery("input[name='College of Engineering']").prop("checked",true);
+                jQuery("input[name='College of Human Ecology']").prop("checked",true);
+                jQuery("input[name='Graduate School']").prop("checked",true);
+            }
+        } else {
+            jQuery("input[name='College of Agriculture']").prop("checked",false);
+            jQuery("input[name='College of Architecture, Planning and Design']").prop("checked",false);
+            jQuery("input[name='College of Arts & Sciences']").prop("checked",false);
+            jQuery("input[name='College of Business Administration']").prop("checked",false);
+            jQuery("input[name='College of Education']").prop("checked",false);
+            jQuery("input[name='College of Engineering']").prop("checked",false);
+            jQuery("input[name='College of Human Ecology']").prop("checked",false);
+            jQuery("input[name='Graduate School']").prop("checked",false);
+        }
+    });
+
+    jQuery("input[name='College of Agriculture']").change(function() {
+        if(this.checked) {
+            jQuery(".candidate-list-student-senate-agriculture").removeClass("hidden");
+            checkSenateIndeterminate();
+        } else {
+            jQuery(".candidate-list-student-senate-agriculture").addClass("hidden");
+            checkSenateIndeterminate();
+        }
+    });
+    jQuery("input[name='College of Architecture, Planning and Design']").change(function() {
+        if(this.checked) {
+            jQuery(".candidate-list-student-senate-architecture").removeClass("hidden");
+            checkSenateIndeterminate();
+        } else {
+            jQuery(".candidate-list-student-senate-architecture").addClass("hidden");
+            checkSenateIndeterminate();
+        }
+    });
+    jQuery("input[name='College of Arts & Sciences']").change(function() {
+        if(this.checked) {
+            jQuery(".candidate-list-student-senate-arts-sciences").removeClass("hidden");
+            checkSenateIndeterminate();
+        } else {
+            jQuery(".candidate-list-student-senate-arts-sciences").addClass("hidden");
+            checkSenateIndeterminate();
+        }
+    });
+    jQuery("input[name='College of Business Administration']").change(function() {
+        if(this.checked) {
+            jQuery(".candidate-list-student-senate-business").removeClass("hidden");
+            checkSenateIndeterminate();
+        } else {
+            jQuery(".candidate-list-student-senate-business").addClass("hidden");
+            checkSenateIndeterminate();
+        }
+    });
+    jQuery("input[name='College of Education']").change(function() {
+        if(this.checked) {
+            jQuery(".candidate-list-student-senate-education").removeClass("hidden");
+            checkSenateIndeterminate();
+        } else {
+            jQuery(".candidate-list-student-senate-education").addClass("hidden");
+            checkSenateIndeterminate();
+        }
+    });
+    jQuery("input[name='College of Engineering']").change(function() {
+        if(this.checked) {
+            jQuery(".candidate-list-student-senate-engineering").removeClass("hidden");
+            checkSenateIndeterminate();
+        } else {
+            jQuery(".candidate-list-student-senate-engineering").addClass("hidden");
+            checkSenateIndeterminate();
+        }
+    });
+    jQuery("input[name='College of Human Ecology']").change(function() {
+        if(this.checked) {
+            jQuery(".candidate-list-student-senate-human-ecology").removeClass("hidden");
+            checkSenateIndeterminate();
+        } else {
+            jQuery(".candidate-list-student-senate-human-ecology").addClass("hidden");
+            checkSenateIndeterminate();
+        }
+    });
+    jQuery("input[name='Graduate School']").change(function() {
+        if(this.checked) {
+            jQuery(".candidate-list-student-senate-graduate").removeClass("hidden");
+            checkSenateIndeterminate();
+        } else {
+            jQuery(".candidate-list-student-senate-graduate").addClass("hidden");
+            checkSenateIndeterminate();
+        }
+    });
+
+    function checkSenateIndeterminate() {
+        if ((!jQuery("input[name='College of Agriculture']").prop("checked")) && (!jQuery("input[name='College of Architecture, Planning and Design']").prop("checked")) && (!jQuery("input[name='College of Arts & Sciences']").prop("checked")) && (!jQuery("input[name='College of Business Administration']").prop("checked")) && (!jQuery("input[name='College of Education']").prop("checked")) && (!jQuery("input[name='College of Engineering']").prop("checked")) && (!jQuery("input[name='College of Human Ecology']").prop("checked")) && (!jQuery("input[name='Graduate School']").prop("checked"))) {
+            // All unchecked
+            jQuery("input[name='Student Senate']").prop("checked", false);
+        } else if ((jQuery("input[name='College of Agriculture']").prop("checked")) && (jQuery("input[name='College of Architecture, Planning and Design']").prop("checked")) && (jQuery("input[name='College of Arts & Sciences']").prop("checked")) && (jQuery("input[name='College of Business Administration']").prop("checked")) && (jQuery("input[name='College of Education']").prop("checked")) && (jQuery("input[name='College of Engineering']").prop("checked")) && (jQuery("input[name='College of Human Ecology']").prop("checked")) && (jQuery("input[name='Graduate School']").prop("checked"))) {
+            // All checked
+            jQuery("input[name='Student Senate']").prop("indeterminate", false);
+        } else {
+            jQuery("input[name='Student Senate']").prop("indeterminate", true);
+        }
+    }
+
+
+    jQuery("input[name='General Council']").change(function() {
+        if (this.checked) {
+            if (jQuery("input[name='General Council']").prop("indeterminate")) {
+                // do nothing
+            } else {
+                jQuery("input[name='Agriculture']").prop("checked",true);
+                jQuery("input[name='Arts & Sciences']").prop("checked",true);
+                jQuery("input[name='Human Ecology']").prop("checked",true);
+            }
+        } else {
+            jQuery("input[name='Agriculture']").prop("checked",false);
+            jQuery("input[name='Arts & Sciences']").prop("checked",false);
+            jQuery("input[name='Human Ecology']").prop("checked",false);
+        }
+    });
+</script>

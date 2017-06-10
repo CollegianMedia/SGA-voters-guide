@@ -1,0 +1,21 @@
+<div id="candidate-filters">
+    <h4>Filter candidates:</h4>
+    <div class="candidate-filter"><input type="checkbox" name="Student Body President and Vice President" checked>Student Body President and Vice President</div>
+    <div class="candidate-filter"><input type="checkbox" name="Student Senate" checked>Student Senate
+        <div class="candidate-filter-inner"><input type="checkbox" name="College of Agriculture" checked>College of Agriculture</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="College of Architecture, Planning and Design" checked>College of Architecture, Planning and Design</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="College of Arts &amp; Sciences" checked>College of Arts &amp; Sciences</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="College of Business Administration" checked>College of Business Administration</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="College of Education" checked>College of Education</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="College of Engineering" checked>College of Engineering</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="College of Human Ecology" checked>College of Human Ecology</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="Graduate School" checked>Graduate School</div>
+    </div>
+    <div class="candidate-filter"><input type="checkbox" name="General Council" checked>General Council
+        <div class="candidate-filter-inner"><input type="checkbox" name="Agriculture" checked>Agriculture</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="Arts &amp; Sciences" checked>Arts &amp; Sciences</div>
+        <div class="candidate-filter-inner"><input type="checkbox" name="Human Ecology" checked>Human Ecology</div>
+    </div>
+    <div class="candidate-filter"><input type="checkbox" name="Student Publications" checked>Student Publications</div>
+    <div class="candidate-filter"><input type="checkbox" name="Union Governing Body" checked>Union Governing Body</div>
+</div>
